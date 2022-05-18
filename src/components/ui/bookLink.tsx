@@ -21,7 +21,7 @@ export default function BookLink({ eventTitle, link, classes }: Props) {
 
   return (
     <a
-      href={isSoldOut ? '/' : link.url}
+      href={isSoldOut ? '/' : '/#disabled-for-example'}
       className={`${classes} ${isSoldOut || isDisabled ? ' no-link' : ''} ${
         isSoldOut ? ' a-btn--hollow' : ''
       }`}

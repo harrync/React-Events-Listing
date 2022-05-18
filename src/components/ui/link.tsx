@@ -19,7 +19,7 @@ export default function Link({
 }: Props) {
   return (
     <a
-      href={href}
+      href="/#disabled-for-example"
       className={classes}
       title={title}
       aria-label={ariaLabel}
