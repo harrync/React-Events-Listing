@@ -1,8 +1,8 @@
 /**
  * JSON feed base url
  */
-// export const siteUrl = window.location.origin
-export const siteUrl = 'https://courtauld.ac.uk/'
+export const siteUrl = window.location.origin
+// export const siteUrl = 'https://courtauld.ac.uk/'
 
 /**
  * Render HTML from string

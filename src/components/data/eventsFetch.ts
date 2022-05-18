@@ -17,7 +17,8 @@ export default async function eventsFetch(
   dataDispatch: React.Dispatch<DataAction>
 ) {
   await axios
-    .get(`${siteUrl}/wp-json/unt/v1/events`)
+    // .get(`${siteUrl}/wp-json/unt/v1/events`)
+    .get(`${siteUrl}/events.json`)
     .then(res => {
       // Sort by first performance datetime
       const sortedData = res.data.sort((a: EventEntity, b: EventEntity) => {
