@@ -1,0 +1,35 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Base - Main
+ * ----------------------
+ */
+
+/**
+ * Styles
+ */
+html,
+body {
+  @include font-smoothing(true);
+  box-sizing: border-box;
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  font-family: var(--fontBody);
+  background-color: var(--c-greyLight);
+  color: var(--c-primary);
+
+  @include media('<lg') {
+    --fontSize: 100%;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,28 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - People profiles
+ * ----------------------
+ */
+
+&__peopleprofiles {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--border {
+      border-bottom: 1px solid var(--c-primary);
+    }
+
+    a {
+      border-bottom-color: var(--c-teal);
+
+      &:hover {
+        &::after {
+          background-color: var(--c-teal);
+        }
+      }
+    }
+  }
+}

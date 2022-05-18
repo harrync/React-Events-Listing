@@ -1,0 +1,18 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - News tags
+ * ----------------------
+ */
+
+&__readmore {
+  .terms {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Linked logos
+ * ----------------------
+ */
+
+&__linkedlogos {
+  --autoGridMin: 100px;
+  --autoGridMax: 30%;
+  --autoGridGap: 2rem;
+
+  @include media('<xs') {
+    --autoGridMax: 1fr;
+  }
+
+  a {
+    @include linkReset;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .a-auto-grid {
+    align-items: end;
+    justify-content: start;
+  }
+
+  .single {
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}

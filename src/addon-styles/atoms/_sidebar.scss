@@ -1,0 +1,45 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Sidebar
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-sidebar {
+  margin-bottom: 3rem;
+  font-size: 1rem;
+
+  @include media('<sm') {
+    margin-bottom: 1.5rem;
+  }
+
+  &--block {
+    border: 1px solid var(--c-primary);
+    border-left: 0;
+    border-right: 0;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .a-tag,
+  .a-btn {
+    margin-bottom: 1.5rem;
+  }
+
+  svg {
+    width: 15px;
+  }
+
+  @include media('<md') {
+    .single-people & {
+      order: -1;
+    }
+  }
+}

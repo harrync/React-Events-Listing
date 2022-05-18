@@ -1,0 +1,129 @@
+/**
+* ----------------------
+* Un.titled
+* Organisms - Performances modal
+* ----------------------
+*/
+
+/**
+* Styling
+*/
+[data-modalOpen='true'] {
+  overflow: hidden;
+}
+
+.o-modal {
+  border: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 25;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  color: var(--c-primary);
+
+  &[data-visible='true'] {
+    display: flex;
+    animation: fadeIn 0.2s ease-in-out forwards;
+  }
+
+  &[data-visible='false'] {
+    display: none;
+    visibility: hidden;
+    // animation: fadeOut 0.2s ease-in-out forwards;
+  }
+
+  @include media('<sm') {
+    .a-cols {
+      padding: 0;
+    }
+  }
+
+  &--fullscreen {
+    background-color: var(--c-primary);
+    color: var(--c-white);
+    padding: 2rem;
+    overflow-y: scroll;
+
+    @include media('<sm') {
+      padding: 2rem 0;
+    }
+
+    .a-cols {
+      max-height: 95vh;
+      padding: 1rem 0 0;
+    }
+
+    .o-modal__close {
+      background-color: transparent;
+      right: 2rem;
+
+      @include media('<sm') {
+        right: 1rem;
+      }
+
+      @include media('<xs') {
+        right: 15px;
+      }
+
+      path {
+        stroke: var(--c-white);
+      }
+
+      &:hover {
+        background-color: var(--c-white);
+
+        path {
+          stroke: var(--c-primary);
+        }
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    background-color: var(--c-white);
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition);
+
+    @include media('<xs') {
+      // top: 0.5rem;
+      right: 0.5rem;
+      height: 35px;
+      width: 35px;
+    }
+
+    svg {
+      width: 20px;
+
+      @include media('<xs') {
+        width: 15px;
+      }
+    }
+
+    path {
+      transition: stroke var(--transition);
+    }
+
+    &:hover {
+      background-color: var(--c-primary);
+
+      path {
+        stroke: var(--c-white);
+      }
+    }
+  }
+}

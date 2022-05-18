@@ -1,0 +1,52 @@
+/**
+* ----------------------
+* Un.titled
+* Molecules - Intro
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.m-intro {
+  width: 100%;
+  max-width: var(--containerWidth);
+  display: grid;
+  justify-content: end;
+  grid-template-columns: minmax(0, var(--cols-6)) minmax(0, var(--cols-3));
+  margin-top: 2rem;
+
+  &--alt {
+    grid-template-columns: minmax(0, var(--cols-3)) minmax(0, var(--cols-6));
+    justify-content: start;
+  }
+
+  &--collection {
+    margin-top: 1rem;
+
+    .a-cols--sm {
+      padding-top: clamp(1.5rem, 4vw, 3rem);
+
+      & > .a-cols--sm {
+        padding: 0;
+      }
+    }
+  }
+
+  @include media('<md') {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .a-cols--xs {
+      max-width: var(--cols-6);
+    }
+  }
+
+  @include media('<sm') {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Auto grid
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--autoGridMin, 1fr), var(--autoGridMax, 1fr))
+  );
+  gap: var(--autoGridGap, 1rem);
+  align-items: start;
+}

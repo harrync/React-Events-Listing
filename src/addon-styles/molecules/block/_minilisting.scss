@@ -1,0 +1,42 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Mini listing
+ * ----------------------
+ */
+
+&__minilisting {
+  --autoGridMin: 20%;
+  --autoGridGap: 2rem;
+
+  @include media('<md') {
+    --autoGridMin: 30%;
+    --autoGridGap: 1rem;
+  }
+
+  @include media('<=sm') {
+    --autoGridMin: 48%;
+  }
+
+  .listing-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-bottom: 1px solid var(--c-primary);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    @include media('<md') {
+      grid-template-columns: 1fr;
+    }
+
+    a {
+      align-self: end;
+      justify-self: end;
+    }
+  }
+
+  // .a-auto-grid {
+  //   align-items: center;
+  // }
+}

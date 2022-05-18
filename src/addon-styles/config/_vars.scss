@@ -1,0 +1,68 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Config - Vars
+ * ----------------------
+ */
+
+:root {
+  // Colours
+  --c-primary: #0e3034;
+  --c-secondary: var(--c-pink);
+  --c-white: #ffffff;
+  --c-greyLight: #f3f2f1;
+  --c-grey: #d0ccc7;
+  --c-teal: #00c7b1;
+  --c-yellow: #ffb81c;
+  --c-purple: #af8ee0;
+  --c-pink: #ffabba;
+  --c-magenta: #eb4264;
+  --c-red: #e71d45;
+  --c-blue: #b4e4f5;
+  --c-maroon: #640a32;
+  --c-black: #000;
+
+  // Typography
+  --fontBody: 'AvenirNextLTW01-Regular', 'Avenir Next World W05 Regular',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fontBold: 'Avenir Next LT W01 Bold', 'Avenir Next World W05 Bold',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fontItalic: 'AvenirNextLTW01-Italic', 'Avenir Next World W05 Italic',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fontTitle: 'GT America', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fontSize: 112.5%;
+  --fontSmall: 70%;
+  --lineHeight: 1.5;
+
+  // Layout
+  --containerWidth: 1802px;
+  --cols-3: calc(var(--containerWidth) * 0.25);
+  --cols-6: calc(var(--containerWidth) * 0.5);
+  --cols-8: calc(var(--containerWidth) * 0.6666666667);
+  --cols-10: calc(var(--containerWidth) * 0.833333333333);
+  --variableHeightLimit: clamp(20vh, 60vw, 60vh);
+  --heightLimit: 700px;
+  --gutter: 15px;
+
+  // Animations
+  --easing: cubic-bezier(0.83, 0, 0.17, 1);
+  --transition: 0.3s var(--easing);
+
+  --lineLength: 600px;
+}
+
+/**
+* Breakpoints for @include-media
+*/
+$breakpoints: (
+  xxs: 360px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xlg: 1600px,
+);

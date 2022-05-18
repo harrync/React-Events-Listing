@@ -1,0 +1,33 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Skip link
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-skip-link {
+  font-family: var(--fontBold);
+  position: absolute;
+  transform: translateY(-100%);
+  width: 100%;
+  background-color: var(--c-primary);
+  color: var(--c-white);
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 10;
+  border: 0;
+  outline: 0;
+
+  &:focus,
+  &:active {
+    transform: translateY(0);
+    color: var(--c-white);
+  }
+}

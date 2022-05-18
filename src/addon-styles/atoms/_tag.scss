@@ -1,0 +1,31 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Tags
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-tag {
+  --tagBg: var(--c-primary);
+  --tagColour: var(--c-white);
+
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  font-size: 90%;
+  letter-spacing: 1px;
+  background-color: var(--tagBg);
+  color: var(--tagColour);
+
+  &--yel {
+    --tagBg: var(--c-yellow);
+    --tagColour: var(--c-primary);
+  }
+}

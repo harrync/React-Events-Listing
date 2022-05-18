@@ -1,0 +1,46 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Sticky
+* ----------------------
+*/
+
+/**
+* Config
+*/
+:root {
+  --stickyLeft: 0;
+  --stickyWidth: 0;
+  --stickyHeight: 0;
+}
+
+/**
+* Styling
+*/
+.a-sticky {
+  &[data-sticky='true'] {
+    .a-btn {
+      position: fixed;
+      top: 0;
+      left: var(--stickyLeft);
+      width: var(--stickyWidth);
+      z-index: 20;
+      transition: none;
+
+      @include media('<xs') {
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    .a-sticky__placeholder {
+      display: block;
+    }
+  }
+
+  &__placeholder {
+    height: var(--stickyHeight);
+    margin-bottom: 1.5rem;
+    display: none;
+  }
+}

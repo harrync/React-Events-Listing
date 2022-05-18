@@ -1,0 +1,230 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Base - Typography
+ * ----------------------
+ */
+
+/**
+ * Config
+ */
+
+/**
+ * Heading
+ */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  font-family: var(--fontTitle);
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+h1,
+.h1 {
+  line-height: 1.15;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+h2,
+.h2 {
+  line-height: 1.15;
+  font-size: clamp(1.4rem, 1.5vw, 2rem);
+}
+
+h3,
+.h3 {
+  line-height: 1.3;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--fontBold);
+  line-height: 1.5;
+  font-size: 1rem;
+
+  @include media('<xs') {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.centered {
+  text-align: center;
+  text-align-last: center;
+}
+
+.border {
+  &-bottom {
+    border-bottom: 1px solid var(--c-primary);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+
+    @include media('<sm') {
+      margin-bottom: 1rem;
+    }
+  }
+  &-top {
+    border-top: 1px solid var(--c-primary);
+    padding-top: 1rem;
+    margin-top: 2rem;
+
+    @include media('<sm') {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/**
+ * Paragraphs
+ */
+p {
+  margin: 0 0 1.5rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Lists
+ */
+ul,
+ol {
+  margin: 1.5rem 0;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/**
+ * Links
+ */
+a,
+.link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  transition: all var(--transition);
+  // border-bottom: 1px solid currentColor;
+  // position: relative;
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   display: block;
+  //   height: 2px;
+  //   background-color: transparent;
+  //   transition: background-color var(--transition);
+  //   width: 100%;
+  // }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: currentColor;
+
+    // &::after {
+    //   background-color: currentColor;
+    // }
+  }
+
+  &:focus {
+    outline: 1px dashed currentColor;
+
+    @include focus-visible() {
+      outline: 0;
+    }
+  }
+
+  &.no-link {
+    pointer-events: none;
+  }
+}
+
+.no-click {
+  pointer-events: none;
+  cursor: default;
+}
+
+::selection {
+  background-color: var(--c-secondary);
+  color: var(--c-primary);
+}
+
+/**
+ * Buttons
+ */
+button {
+  &:focus {
+    outline: 3px dashed currentColor;
+
+    @include focus-visible() {
+      outline: 0;
+    }
+  }
+}
+
+/**
+ * Inline
+ */
+strong {
+  font-weight: normal;
+  font-family: var(--fontBold);
+}
+
+em {
+  font-family: var(--fontItalic);
+  font-style: italic;
+}
+
+span {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+}
+
+address {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+  font-style: normal;
+}
+
+small {
+  font-size: 90%;
+}
+
+hr {
+  border: solid var(--c-primary);
+  border-width: 0 0 1px 0;
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}

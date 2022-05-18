@@ -1,0 +1,28 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - signposts
+ * ----------------------
+ */
+
+&__signposts {
+  --autoGridMin: 20%;
+  --autoGridGap: 2rem;
+
+  p:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .a-auto-grid {
+    margin-top: 2rem;
+  }
+
+  @include media('<=sm') {
+    --autoGridMin: 30%;
+    --autoGridGap: 1rem;
+  }
+
+  @include media('<xs') {
+    --autoGridMin: 48%;
+  }
+}

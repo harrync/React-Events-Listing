@@ -1,0 +1,71 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Big CTA
+ * ----------------------
+ */
+
+&__bigcta {
+  text-align: center;
+  text-align-last: center;
+  // padding: 3rem 0;
+
+  // @include media('<sm') {
+  //   padding: 1.5rem 0;
+  // }
+
+  .a-links {
+    justify-content: center;
+
+    a {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .big-btn {
+    @include linkReset;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 3rem 1.5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+
+    @include media('<sm') {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    svg {
+      margin-top: 1rem;
+      width: 50px;
+    }
+
+    &::after {
+      content: '';
+      background-color: var(--c-pink);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      transform: translateY(35%);
+      visibility: visible;
+      display: block;
+      z-index: -1;
+      transition: transform var(--transition);
+
+      @include media('<sm') {
+        transform: translateY(27%);
+      }
+    }
+
+    &:hover {
+      &::after {
+        transform: translateY(0);
+      }
+    }
+  }
+}

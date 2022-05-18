@@ -1,0 +1,30 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Quick links
+ * ----------------------
+ */
+
+&__quicklinks {
+  margin-top: -5rem;
+  position: relative;
+
+  @include media('<lg') {
+    margin-top: -3rem;
+  }
+
+  @include media('<md') {
+    margin-top: -2rem;
+  }
+
+  .a-cols {
+    background-color: var(--c-white);
+    padding-top: 1.25rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .a-links {
+    margin: 0;
+    justify-content: center;
+  }
+}

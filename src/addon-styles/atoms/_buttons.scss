@@ -1,0 +1,147 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Atoms - Buttons
+ * ----------------------
+ */
+
+/**
+ * Config
+ **/
+
+@mixin btn {
+  @include linkReset;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btnBg);
+  color: var(--btnColour);
+  border: 1px solid var(--btnBg);
+  transition: all var(--transition);
+  text-decoration: none;
+
+  svg {
+    margin-left: 10px;
+    transition: transform var(--transition);
+    width: 20px;
+  }
+
+  path {
+    fill: currentColor;
+  }
+}
+
+@mixin btn-hover {
+  text-decoration: none;
+  color: var(--btnColour);
+
+  svg {
+    transform: translateX(5px);
+  }
+}
+
+/**
+ * Styles
+ **/
+
+.a-btn {
+  --btnBg: var(--c-primary);
+  --btnColour: var(--c-white);
+  @include btn;
+
+  &:focus,
+  &:hover {
+    @include btn-hover;
+  }
+
+  &--yel {
+    --btnBg: var(--c-yellow);
+    --btnColour: var(--c-primary);
+  }
+
+  &--blue {
+    --btnBg: var(--c-blue);
+    --btnColour: var(--c-primary);
+  }
+
+  &--wh {
+    --btnBg: var(--c-white);
+    --btnColour: var(--c-primary);
+  }
+
+  &--wide {
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    @include media('<xs') {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: flex;
+    }
+  }
+
+  &--fullWidth {
+    display: flex;
+    width: 100%;
+  }
+
+  &--narrow {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &--sm {
+    --btnBg: transparent;
+    --btnColour: var(--c-primary);
+    border-color: var(--c-primary);
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    font-size: var(--fontSmall);
+    letter-spacing: 1px;
+
+    &:hover {
+      --btnBg: var(--c-primary);
+      color: var(--c-white);
+    }
+  }
+
+  &--hollow {
+    --btnBg: transparent;
+    --btnColour: var(--c-primary);
+    border-color: var(--c-primary);
+  }
+
+  &--iconLeft {
+    svg {
+      margin: 0 10px 0 0;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  &--white {
+    --btnBg: transparent;
+    --btnColour: var(--c-white);
+    border-color: var(--c-white);
+
+    &:hover {
+      background-color: var(--c-pink);
+      color: var(--c-primary);
+      border-color: var(--c-pink);
+    }
+  }
+
+  &:focus {
+    outline: 3px dashed var(--btnBg);
+
+    @include focus-visible() {
+      outline: 0;
+    }
+  }
+}

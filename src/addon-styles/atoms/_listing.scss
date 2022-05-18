@@ -1,0 +1,34 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Listing
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-listing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  // align-items: center;
+
+  @include media('<lg') {
+    gap: 1rem;
+  }
+
+  @include media('<=sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media('<xs') {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

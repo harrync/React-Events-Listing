@@ -1,0 +1,21 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Image captions
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-caption {
+  @include bg-img(8px);
+  padding-left: var(--gutter);
+  background-image: url('../img/arrow-head.svg');
+  background-position: left 11px;
+  font-size: var(--fontSmall);
+}

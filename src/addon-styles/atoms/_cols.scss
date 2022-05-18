@@ -1,0 +1,40 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Columns
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-cols {
+  width: 100%;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+
+  &--xs {
+    max-width: var(--cols-3);
+  }
+
+  &--sm {
+    max-width: var(--cols-6);
+  }
+
+  &--md {
+    max-width: var(--cols-8);
+  }
+
+  &--full {
+    max-width: var(--containerWidth);
+  }
+
+  &--bgColour {
+    margin: 4rem auto;
+  }
+}

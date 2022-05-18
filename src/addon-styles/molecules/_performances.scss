@@ -1,0 +1,127 @@
+/**
+* ----------------------
+* Un.titled
+* Molecules - Performances modal
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.m-performances {
+  --modalPadding: 4rem;
+
+  @include media('<sm') {
+    --modalPadding: 2rem;
+  }
+
+  @include media('<xs') {
+    --modalPadding: 1rem;
+  }
+
+  background-color: rgba(14, 48, 52, 0.9);
+
+  &__inner {
+    background-color: var(--c-greyLight);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: var(--containerWidth);
+    padding: 2rem 0;
+    position: relative;
+    max-height: 100vh;
+
+    @include media('<sm') {
+      h2 {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &__performances {
+    margin: 2rem 0 0;
+    padding: 0 var(--modalPadding);
+    overflow: hidden;
+    overflow-y: scroll;
+
+    @include media('<sm') {
+      margin-top: 1rem;
+    }
+  }
+
+  &__performance {
+    display: grid;
+    grid-template-columns: minmax(150px, auto) 1fr minmax(200px, auto);
+    gap: 2rem;
+    position: relative;
+    padding: 0.75rem 0;
+    align-items: center;
+    border-bottom: 1px solid var(--c-primary);
+    transition: var(--transition);
+
+    @include media('<sm') {
+      grid-template-columns: minmax(150px, auto) 1fr;
+      gap: 1rem;
+    }
+
+    @include media('<xs') {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid var(--c-primary);
+    }
+
+    time {
+      font-size: 1.3rem;
+
+      @include media('<lg') {
+        font-size: 1rem;
+      }
+
+      @include media('>xs', '<sm') {
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+
+    .a-btn {
+      justify-self: end;
+      margin-bottom: 0;
+
+      @include media('>xs', '<sm') {
+        grid-column: span 2;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: var(--modalPadding);
+      height: 100%;
+      top: 0;
+      background-color: inherit;
+    }
+
+    &::before {
+      left: calc(var(--modalPadding) * -1);
+    }
+
+    &::after {
+      right: calc(var(--modalPadding) * -1);
+    }
+
+    &:hover {
+      background-color: var(--c-yellow);
+      border-color: transparent;
+    }
+  }
+}

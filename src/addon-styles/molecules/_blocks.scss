@@ -1,0 +1,93 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Entities
+ * ----------------------
+ */
+
+article {
+  & > .m-entity:last-of-type {
+    &.bgColour {
+      margin-bottom: -30px;
+
+      @include media('<sm') {
+        margin-bottom: -20px;
+      }
+    }
+  }
+}
+
+.m-entity {
+  margin: 0 0 clamp(2rem, 5vw, 5rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // &__text.bgColour {
+  //   margin: 0;
+  // }
+
+  img:not(.restricted-height) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &--top {
+    margin-top: clamp(2rem, 5vw, 5rem);
+  }
+
+  &__body,
+  &__text,
+  &__accordion {
+    ul {
+      margin-left: var(--gutter);
+
+      li {
+        list-style: none;
+        position: relative;
+        margin-bottom: 10px;
+
+        &::before {
+          content: '';
+          border-radius: 50%;
+          height: 7px;
+          width: 7px;
+          display: block;
+          position: absolute;
+          left: -15px;
+          top: 12px;
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+
+  @import './block/intro';
+  @import './block/image';
+  @import './block/quote';
+  @import './block/accordion';
+  @import './block/gallery';
+  @import './block/image-text';
+  @import './block/downloads';
+  @import './block/embed';
+  @import './block/table';
+  @import './block/signpost';
+  @import './block/signposts';
+  @import './block/linked-logos';
+  @import './block/video';
+  @import './block/ymal';
+  @import './block/big-cta';
+  @import './block/readmore';
+  @import './block/quicklinks';
+  @import './block/special-options';
+  @import './block/people-profiles';
+  @import './block/listing';
+  @import './block/minilisting';
+  @import './block/featured-content';
+  @import './block/citations';
+  @import './block/imagezoom';
+  @import './block/forms';
+  @import './block/search-results';
+}

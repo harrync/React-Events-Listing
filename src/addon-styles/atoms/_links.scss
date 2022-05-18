@@ -1,0 +1,28 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Links
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-links {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media('<sm') {
+    margin: 1rem 0;
+  }
+
+  a {
+    margin-right: 1rem;
+  }
+}

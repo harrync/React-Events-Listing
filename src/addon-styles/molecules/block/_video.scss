@@ -1,0 +1,14 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Video
+ * ----------------------
+ */
+
+&__video {
+  --autoGridGap: 2rem;
+
+  @include media('>xxs') {
+    --autoGridMin: 230px;
+  }
+}

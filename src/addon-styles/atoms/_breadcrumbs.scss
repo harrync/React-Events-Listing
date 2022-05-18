@@ -1,0 +1,39 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Breadcrumbs
+* ----------------------
+*/
+
+/**
+* Styling
+*/
+.a-breadcrumbs {
+  padding: 0.5rem 2rem;
+  font-size: var(--fontSmall);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media('<sm') {
+    display: none;
+    visibility: hidden;
+    padding: 0.5rem 1rem;
+  }
+
+  @include media('<xs') {
+    padding: 0.5rem 15px;
+  }
+
+  &__divider {
+    margin: 0 5px;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

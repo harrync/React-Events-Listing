@@ -1,0 +1,23 @@
+/**
+* ----------------------
+* Un.titled
+* Molecules - Downloads
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+&__downloads {
+  a {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

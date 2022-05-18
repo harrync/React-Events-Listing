@@ -1,0 +1,35 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Special Options
+ * ----------------------
+ */
+
+&__special-options {
+  hr {
+    margin-bottom: 3rem;
+
+    @include media('<sm') {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .a-auto-grid {
+    --autoGridMin: 23%;
+    --autoGridMax: 1fr;
+    --autoGridGap: 2rem;
+
+    margin-top: 3rem;
+
+    @include media('<sm') {
+      --autoGridMin: 200px;
+      --autoGridMax: 1fr;
+
+      margin-top: 1.5rem;
+    }
+
+    @include media('<xs') {
+      --autoGridMin: 150px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/**
+* ----------------------
+* Un.titled
+* Atoms - Pagination
+* ----------------------
+*/
+
+/**
+* Config
+*/
+
+/**
+* Styling
+*/
+.a-pager {
+  @include li-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+
+  .disabled {
+    display: none;
+    visibility: hidden;
+  }
+
+  span,
+  a {
+    @include linkReset;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+
+      path {
+        fill: var(--c-secondary);
+      }
+    }
+  }
+
+  span,
+  a.undefined {
+    text-decoration: underline;
+  }
+
+  svg {
+    width: 25px;
+    margin: 0 0.5rem;
+  }
+
+  path {
+    transition: fill var(--transition);
+  }
+}

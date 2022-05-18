@@ -1,0 +1,33 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Image & Text
+ * ----------------------
+ */
+
+.m-imagetext {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+
+  @include media('<xs') {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &--reverse {
+    grid-template-columns: 2fr 1fr;
+
+    @include media('<xs') {
+      grid-template-columns: 1fr;
+    }
+
+    .m-imagetext__copy {
+      order: -1;
+
+      @include media('<xs') {
+        order: 1;
+      }
+    }
+  }
+}

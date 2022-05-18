@@ -1,0 +1,68 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Flexible signpost
+ * ----------------------
+ */
+
+&__signpost {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .signpost {
+    max-width: var(--containerWidth);
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: start;
+
+    @include media('<lg') {
+      gap: 2rem;
+      margin-left: 1rem auto;
+    }
+
+    @include media('<sm') {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
+
+    &--reverse {
+      .signpost__image {
+        order: -1;
+      }
+    }
+
+    &__image {
+      @include linkReset;
+
+      img {
+        transition: opacity var(--transition);
+      }
+
+      &:hover {
+        opacity: 1;
+
+        img {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    &__content {
+      display: grid;
+      gap: 1.5rem;
+      justify-items: start;
+
+      h2,
+      .a-links {
+        margin: 0;
+      }
+
+      p {
+        max-width: var(--lineLength);
+      }
+    }
+  }
+}

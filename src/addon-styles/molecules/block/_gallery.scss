@@ -1,0 +1,38 @@
+/**
+ * ----------------------
+ * Un.titled
+ * Molecules - Gallery
+ * ----------------------
+ */
+
+&__gallery {
+  --autoGridMin: 20%;
+  --autoGridGap: 2rem;
+
+  @include media('<sm') {
+    --autoGridMin: 30%;
+    --autoGridGap: 1rem;
+  }
+
+  @include media('<500px') {
+    --autoGridMin: 100px;
+  }
+
+  a {
+    @include linkReset;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .a-auto-grid {
+    align-items: end;
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: var(--fontSmall);
+  }
+}
